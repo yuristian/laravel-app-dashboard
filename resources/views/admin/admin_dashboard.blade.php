@@ -82,9 +82,17 @@ License: For each use you must have a valid license purchased only from above li
 	<script src="{{ asset('backend/assets/js/template.js') }}"></script>
 	<!-- endinject -->
 
+    <!-- Datatable -->
     <script src="{{ asset('backend/assets/vendors/datatables.net/jquery.dataTables.js') }}"></script>
     <script src="{{ asset('backend/assets/vendors/datatables.net-bs5/dataTables.bootstrap5.js') }}"></script>
     <script src="{{ asset('backend/assets/js/data-table.js') }}"></script>
+    <!-- End Datatable -->
+
+    <!-- Sweetalert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="{{ asset('backend/assets/js/code/code.js') }}"></script>
+    <script src="{{ asset('backend/assets/js/code/validate.min.js') }}"></script>
+    <!-- End Sweetalert -->
 
 	<!-- Custom js for this page -->
     <script src="{{ asset('backend/assets/js/dashboard-dark.js') }}"></script>
