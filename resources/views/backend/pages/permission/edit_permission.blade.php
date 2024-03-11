@@ -9,8 +9,9 @@
                         <div class="card">
                             <div class="card-body">
                                 <h6 class="card-title">Edit Permissions</h6>
-                                <form method="POST" action="{{ route('store.permission') }}" class="forms-sample" id="myForm">
+                                <form method="POST" action="{{ route('update.permission') }}" class="forms-sample" id="myForm">
                                     @csrf
+                                    <input type="hidden" name="id" value="{{ $permission->id }}" />
                                     <div class="form-group mb-3">
                                         <label for="name" class="form-label">Permission Name</label>
                                         <input type="text" name="name" class="form-control" value="{{ $permission->name }}">
