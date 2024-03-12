@@ -230,4 +230,55 @@ class RoleController extends Controller
         return redirect()->route('all.role.permission')->with($notification);
     } // End Method
 
+    /**
+     * Display Admin Edit Role Form.
+     * @var id int
+     */
+    public function AdminEditRole($id) {
+        $role = Role::findOrFail($id);
+        $permissions = Permission::all();
+        $permission_groups = User::getPermissionGroups();
+        return view('backend.pages.rolesetup.edit_role_permission', compact('role','permissions','permission_groups'));
+
+    } // End Method
+
+    /**
+     * Update Admin Edit Role Data.
+     * @var id int
+     */
+    public function AdminUpdateRole(Request $request, $id) {
+        $role = Role::findOrFail($id);
+        $permissions = $request->permission;
+
+        if(!empty($permissions)) {
+            $role->syncPermissions($permissions);
+        }
+
+        $notification = array(
+            'message'       => 'Role Permission Updated Successfully',
+            'alert-type'    => 'success'
+        );
+
+        return redirect()->route('all.role.permission')->with($notification);
+    } // End Method
+
+    /**
+     * Delete Admin Role Data.
+     * @var id int
+     */
+    public function AdminDeleteRole($id) {
+        $role = Role::findOrFail($id);
+
+        if(!is_null($role)) {
+            $role->delete();
+        }
+
+        $notification = array(
+            'message'       => 'Role Permission Deleted Successfully',
+            'alert-type'    => 'success'
+        );
+
+        return redirect()->back()->with($notification);
+    } // End Method
+
 }

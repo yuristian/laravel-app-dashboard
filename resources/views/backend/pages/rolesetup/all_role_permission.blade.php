@@ -38,8 +38,8 @@
                                             @endforeach
                                         </td>
                                         <td>
-                                            <a href="{{ route('edit.role', $item->id) }}" class="btn btn-inverse-warning">Edit</a>
-                                            <a href="{{ route('delete.role', $item->id) }}" id="delete" class="btn btn-inverse-danger">Delete</a>
+                                            <a href="{{ route('admin.edit.role', $item->id) }}" class="btn btn-inverse-warning">Edit</a>
+                                            <a href="{{ route('admin.delete.role', $item->id) }}" id="delete" class="btn btn-inverse-danger">Delete</a>
                                         </td>
                                     </tr>
                                 @endforeach

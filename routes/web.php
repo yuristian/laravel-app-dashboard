@@ -92,6 +92,10 @@ Route::middleware(['auth','role:admin'])->group(function(){
         Route::get('/add/role/permission','AddRolePermission')->name('add.role.permission');
         Route::post('/store/role/permission','StoreRolePermission')->name('store.role.permission');
 
+        Route::get('/admin/edit/role/{id}','AdminEditRole')->name('admin.edit.role');
+        Route::post('/admin/update/role/{id}','AdminUpdateRole')->name('admin.update.role');
+        Route::get('/admin/delete/role/{id}','AdminDeleteRole')->name('admin.delete.role');
+
     });
 
 
