@@ -4,7 +4,7 @@
     <div class="page-content">
         <nav class="page-breadcrumb">
             <ol class="breadcrumb">
-                <a href="{{ route('export')}} " class="btn btn-inverse-warning">Download Xlsx File</a>
+                <a href="{{ route('export')}} " class="btn btn-inverse-danger">Download Xlsx File</a>
             </ol>
         </nav>
         <div class="row profile-body">
@@ -14,7 +14,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <h6 class="card-title">Import Permissions</h6>
-                                <form method="POST" action="{{ route('store.permission') }}" class="forms-sample" id="myForm">
+                                <form method="POST" action="{{ route('import') }}" class="forms-sample" id="myForm" enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group mb-3">
                                         <label for="import_file" class="form-label">Xls File Import</label>
