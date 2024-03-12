@@ -55,46 +55,27 @@
                     </ul>
                 </div>
             </li>
-            <li class="nav-item">
-                <a href="pages/apps/calendar.html" class="nav-link">
-                    <i class="link-icon" data-feather="calendar"></i>
-                    <span class="link-title">Calendar</span>
-                </a>
-            </li>
-            <li class="nav-item nav-category">Components</li>
-            <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="collapse" href="#uiComponents" role="button" aria-expanded="false"
-                    aria-controls="uiComponents">
-                    <i class="link-icon" data-feather="feather"></i>
-                    <span class="link-title">UI Kit</span>
-                    <i class="link-arrow" data-feather="chevron-down"></i>
-                </a>
-                <div class="collapse" id="uiComponents">
-                    <ul class="nav sub-menu">
-                        <li class="nav-item">
-                            <a href="pages/ui-components/accordion.html" class="nav-link">Accordion</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/ui-components/alerts.html" class="nav-link">Alerts</a>
-                        </li>
-                    </ul>
-                </div>
-            </li>
             <li class="nav-item nav-category">Role and Permission</li>
             <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="collapse" href="#advancedUI" role="button"
-                    aria-expanded="false" aria-controls="advancedUI">
+                <a class="nav-link" data-bs-toggle="collapse" href="#rolespermission" role="button"
+                    aria-expanded="false" aria-controls="rolespermission">
                     <i class="link-icon" data-feather="anchor"></i>
                     <span class="link-title">Role and Permission</span>
                     <i class="link-arrow" data-feather="chevron-down"></i>
                 </a>
-                <div class="collapse" id="advancedUI">
+                <div class="collapse" id="rolespermission">
                     <ul class="nav sub-menu">
                         <li class="nav-item">
                             <a href="{{ route('all.permission') }}" class="nav-link">All Permission</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('add.permission') }}" class="nav-link">Add Permission</a>
+                            <a href="{{ route('all.role') }}" class="nav-link">All Role</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('add.role.permission') }}" class="nav-link">Role in Permission</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('all.role.permission') }}" class="nav-link">All Role in Permission</a>
                         </li>
                     </ul>
                 </div>

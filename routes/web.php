@@ -69,6 +69,7 @@ Route::middleware(['auth','role:admin'])->group(function(){
     });
 
     Route::controller(RoleController::class)->group(function(){
+        //Permission All Route
         Route::get('/all/permission','AllPermission')->name('all.permission');
         Route::get('/add/permission','AddPermission')->name('add.permission');
         Route::post('/store/permission','StorePermission')->name('store.permission');
@@ -78,6 +79,19 @@ Route::middleware(['auth','role:admin'])->group(function(){
         Route::get('/import/permission','ImportPermission')->name('import.permission');
         Route::get('export','Export')->name('export');
         Route::post('import','Import')->name('import');
+
+        //Roles All Route
+        Route::get('/all/role','AllRole')->name('all.role');
+        Route::get('/add/role','AddRole')->name('add.role');
+        Route::post('/store/role','StoreRole')->name('store.role');
+        Route::get('/edit/role/{id}','EditRole')->name('edit.role');
+        Route::post('/update/role','UpdateRole')->name('update.role');
+        Route::get('/delete/role/{id}','DeleteRole')->name('delete.role');
+
+        Route::get('/all/role/permission','AllRolePermission')->name('all.role.permission');
+        Route::get('/add/role/permission','AddRolePermission')->name('add.role.permission');
+        Route::post('/store/role/permission','StoreRolePermission')->name('store.role.permission');
+
     });
 
 
