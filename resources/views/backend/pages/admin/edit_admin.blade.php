@@ -9,7 +9,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <h6 class="card-title">Edit Admin</h6>
-                                <form method="POST" action="{{ route('store.admin') }}" class="forms-sample"
+                                <form method="POST" action="{{ route('update.admin', $user->id) }}" class="forms-sample"
                                     id="myForm">
                                     @csrf
                                     <div class="form-group mb-3">
@@ -31,10 +31,6 @@
                                     <div class="form-group mb-3">
                                         <label for="address" class="form-label">Admin Address</label>
                                         <input type="text" name="address" class="form-control" value="{{ $user->address }}">
-                                    </div>
-                                    <div class="form-group mb-3">
-                                        <label for="password" class="form-label">Admin Password</label>
-                                        <input type="password" name="password" class="form-control">
                                     </div>
                                     <div class="form-group mb-3">
                                         <label for="name" class="form-label">Role Name</label>

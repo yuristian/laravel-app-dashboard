@@ -45,7 +45,7 @@
                                             <td>
                                                 <a href="{{ route('edit.admin', $item->id) }}"
                                                     class="btn btn-inverse-warning">Edit</a>
-                                                <a href="{{ route('delete.role', $item->id) }}" id="delete"
+                                                <a href="{{ route('delete.admin', $item->id) }}" id="delete"
                                                     class="btn btn-inverse-danger">Delete</a>
                                             </td>
                                         </tr>
