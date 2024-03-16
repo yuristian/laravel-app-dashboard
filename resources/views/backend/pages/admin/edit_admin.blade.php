@@ -41,7 +41,7 @@
                                         <select name="roles" class="form-select">
                                             <option selected="" disabled="">Select Role</option>
                                             @foreach ($roles as $role)
-                                                <option value="{{ $role->id }}">{{ $role->name }}</option>
+                                                <option value="{{ $role->id }}" {{ $user->hasRole($role->name) }}>{{ $role->name }}</option>
                                             @endforeach
                                         </select>
                                     </div>
