@@ -33,6 +33,7 @@
                                             <option value="smtp">SMTP Setting</option>
                                             <option value="site">Site Setting</option>
                                             <option value="role">Role & Permission</option>
+                                            <option value="admin">Manage Admin</option>
                                         </select>
                                     </div>
                                     <button type="submit" class="btn btn-primary me-2">Save Changes</button>
